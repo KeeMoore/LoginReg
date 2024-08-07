@@ -1,0 +1,111 @@
+﻿@* @{
+    ViewData["Title"] = "Home Page";
+    }
+<div class="card">
+  <div class="card-body">
+    <h1 class="display-4 text-center">Login</h1>
+<form asp-action="Login" method="post">
+<div class="form-floating mb-3">
+  <input type="Email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
+  <label for="floatingInput">Email address</label>
+</div>
+<div class="form-floating">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required />
+  <label for="floatingPassword">Password</label>
+  <button type="submit">Login</button>
+</div>
+</form>
+  </div>
+</div>
+
+ 
+<div class="card">
+    <div class="card-body">
+        <h1 class="display-4 text-center">Register</h1>
+        <form asp-action="Login" method="post">
+            <div class="form-floating">
+                <input type="FirstName" class="form-control mb-3" id="firstName" placeholder="FirstName" required />
+                <label for="firstName">FirstName</label>
+            </div>
+            <div class="form-floating">
+                <input type="LastName" class="form-control mb-3" id="LastName" placeholder="LastName" required />
+                <label for="LastName">LastName</label> </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        required />
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control mb-3" id="floatingPassword" placeholder="Password" required />
+                    <label for="floatingPassword">Password</label>
+                    
+                </div>
+                <div class="form-floating">
+                    <input type="confirmpassword" class="form-control mb-3" id="ConfirmPassword"
+                        placeholder="ConfirmPassword" required />
+                    <label for="floatingPassword">ConfirmPassword</label>
+                    <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+ *@
+
+ @{
+    ViewData["Title"] = "Home Page";
+}
+@model User;
+<div class="card">
+    <div class="card-body">
+        <h1 class="display-4 text-center">Login</h1>
+        <form asp-action="Login" method="post">
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
+                <label for="floatingInput">Email address</label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Password" class="form-control" id="floatingPassword" placeholder="Password" required />
+                <label for="floatingPassword">Password</label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="card">
+    <div class="card-body">
+        <h1 class="display-4 text-center">Register</h1>
+        <form asp-action="Register" method="post">
+            <div class="form-floating mb-3">
+                <input asp-for="FirstName" class="form-control" id="firstName" placeholder="FirstName" required />
+                <label for="firstName">First Name</label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="LastName" class="form-control" id="LastName" placeholder="LastName" required />
+                <label for="LastName">Last Name</label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
+                <label for="floatingInput">Email address</label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Password" class="form-control" id="floatingPassword" placeholder="Password" required />
+                <label for="floatingPassword">Password</label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="ConfirmPassword" class="form-control" id="ConfirmPassword" placeholder="ConfirmPassword" required />
+                <label for="ConfirmPassword">Confirm Password</label>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+    </div>
+</div>
+
